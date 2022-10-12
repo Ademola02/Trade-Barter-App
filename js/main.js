@@ -1,82 +1,119 @@
-// Get the modal
-let modal = document.querySelector('#id01');
-let modalContent = document.querySelector('.modalContent');
-let loginContent = document.querySelector('.logi');
-// Signup
-let signName = document.querySelector("#id01 > section.modalContent > div > input[type=text]:nth-child(5)");
-let passName = document.querySelector("#id01 > section.modalContent > div > input[type=password]:nth-child(7)");
-let rpassName = document.querySelector("#id01 > section.modalContent > div > input[type=password]:nth-child(9)");
-let logName = document.querySelector("#id01 > section.logi > div.login.container > input.logname");
-let plogName = document.querySelector("#id01 > section.logi > div.login.container > input.pasname");
+const signIn = document.querySelector('.signin');
+const logIn = document.querySelector('.login');
 let details = [];
-let detail;
-let ogg=JSON.parse(localStorage.getItem('signDetails'));
-   detail = ogg  
-function trade(){
-  modal.classList.add('block'); 
-}
+ let ogg=JSON.parse(localStorage.getItem('signDetails'));
+details = ogg  || [] ;
+const text = document.querySelector('#txt');
 
-function clos(){
- modal.classList.remove('block');
-}
-// Login
-function login(){
-  if(logName.value === detail[0].signName || plogName.value === detail[0].passName){
-    // console.log(123); 
-    console.log(345);
-    modal.classList.remove('block');
-  }else{
-    console.log(logName.value,plogName)
-  }
+//Sign in
+// const signUp = document.querySelector('#signUp');
+const signEmail = document.querySelector('#inp1');
+const signPassword = document.querySelector('#inp2');
+const signRpassword = document.querySelector('#inp3');
 
-  //  if(logName !== detail[0].signName || plogName !== detail[0].passName){
-  //   console.log(123)
-  // }
-  
-}
+// Login in
+const loginEmail = document.querySelector('#inp1');
+const loginPassword = document.querySelector('#inp2');
+// const logins = document.querySelector('#logins');
 
+   // SignUp
+function signUp(){
+   if(!signEmail.value || !signPassword.value || !signRpassword.value){
+          signEmail.classList.add('outline'); 
+          return;
+        }
+        else if(signEmail.value !='' && details.length !=0){
+         let chec = details.find(element => {
+            return element.signEmail == signEmail.value
+         });
 
-// Confirm password inputs
-function signup(){ 
-  if(!signName.value || !passName.value || !rpassName.value){
-    // modal.classList.add('block'); 
-    console.log(123)
-  }
-  else{
-    modal.classList.remove('block');
-    posh();
-  } 
-  }
-  if(passName.value !== rpassName.value){
-  rpassName.classList.add('outline');
-  modal.classList.add('block'); 
-  }
-  else{
-    rpassName.classList.remove('outline'); 
-//  console.log(details)
+         if (chec){
+            text.hidden = false;
 
-}
-
-function signin(){
- loginContent.hidden = false;
- modalContent.classList.add('hidden');
-}
+            return;
+         } else{
+            signEmail.classList.remove('outline'); 
+            
+         }
+                          
+        }
+         posh()
+         // location.replace('index.html');
+};
+ 
 function posh(){
-  let obj={signName:signName.value,passName:passName.value,rpassName:rpassName.value};
-  details.push(obj);
-  setstorage();
-}
-// localstorage
+    let obj = {signEmail:signEmail.value,signPassword:signPassword.value,signRpassword:signRpassword.value};
+
+    details.push(obj);
+   //  console.log(details);
+    setstorage();
+};
+
+// Local Storage
 function setstorage(){
-   localStorage.setItem('signDetails',JSON.stringify(details));
+   localStorage.setItem('signDetails', JSON.stringify(details));
+}
+
+  // Login
+function logins(){
+   if(!loginEmail.value){
+      loginEmail.classList.add('outline');
+      return;
+   }
+   else{
+      loginEmail.classList.remove('outline');
+};
+       let chec = details.find(element => {
+               return element.signPassword == loginPassword.value
+            });
+            // console.log(chec.signPassword)
+            
+            if(chec.signPassword !== loginPassword.value){
+                note.hidden = true;
+               console.log(123);
+               // return location.replace('index.html');
+               //  
+               
+            }
+            // else if(chec == loginPassword.value){
+            //     note.hidden = false;
+            //    console.log(chec)
+              
+               
+            //    };
+            }
    
-  //  || [];
+   
+  
+
+function enter(){
+   signIn.classList.add('hidden');
+   location.replace('login.html');
 }
 
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.classList.remove('block');
-  }
-}
+
+
+// // // Login
+// function login(){
+//   if(logName.value === detail[0].signName || plogName.value === detail[0].passName){
+//     // console.log(123); 
+//     console.log(345);
+//     modal.classList.remove('block');
+//   }else{
+//     console.log(logName.value,plogName)
+//   }
+
+//    if(logName !== detail[0].signName || plogName !== detail[0].passName){
+//     console.log(123)
+//   }
+  
+// }
+
+
+
+
+
+
+
+

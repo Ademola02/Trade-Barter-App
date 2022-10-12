@@ -9,12 +9,12 @@
 }
 *{
     font-family: 'Poppins', sans-serif;
-    margin:0; padding:0;
+    margin:0; 
+    padding:0;
     box-sizing: border-box;
     outline: none; border:none;
     text-decoration: none !important;
     text-transform: capitalize;
-    transition: all .2s linear;
 }
 
 html{
@@ -402,13 +402,14 @@ body{
 
 .footer .box-container .box .links{
     display: block;
-    font-size: 1.5rem;
+    font-size: 2.5em !important;
     color:var(--light-color);
     padding:1rem 0;
 }
 
 .footer .box-container .box .links i{
     color:var(--orange);
+    font-size: medium !important;
     padding-right: .5rem;
 }
 
@@ -419,7 +420,7 @@ body{
 
 .footer .box-container .box p{
     line-height: 1.8;
-    font-size: 1.5rem;
+    font-size: 1.9rem;
     color:var(--light-color);
     padding:1rem 0;
 }
@@ -429,7 +430,7 @@ body{
     width:4rem;
     line-height:4rem;
     border-radius: .5rem;
-    font-size: 2rem;
+    font-size: 2em !important;
     color:var(--black);
     margin-right: .2rem;
     background: #eee;
@@ -463,7 +464,7 @@ body{
     margin-top: 2rem;
     padding:1rem;
     padding-top: 2.5rem;
-    font-size: 2rem;
+    font-size: 2em;
     color:var(--black);
     border-top: var(--border);
 }
@@ -472,176 +473,11 @@ body{
     color:var(--orange);
 }
 /* SIGN UP */
-.outline{
-    outline-style: solid !important;
-    outline-color: #eb0d2a !important;
-}
-/* Full-width input fields */
-input[type=text], input[type=password] {
-    width: 100%;
-    font-size: 1em;
-    padding: 12px;
-    margin: 5px 0 1px 0;
-    color:  rgb(38, 32, 81);
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-  }
+
   
-  /* Add a background color when the inputs get focus */
-  input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-  
-  /* Set a style for all buttons */
-  button {
-    background-color: rgb(38, 32, 81);
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-  }
-  
-  button:hover {
-    opacity:1;
-  }
-  
-  /* Extra styles for the cancel button */
-  .cancelbtn {
-    padding: 14px 20px;
-    background-color: rgb(255, 120, 0);
-  }
-  
-  /* Float cancel and signup buttons and add an equal width */
-  .cancelbtn, .signupbtn {
-    float: left;
-    width: 50%;
-  }
-  
-  /* Add padding to container elements */
-  .sgn{
-    padding: 10px;
-    border: 1px solid red;
  
-  }
-  .hidden{
-    display: none;
-  }
-  .block{
-    display: block;
-  }
-  /* The Modal (background) */
-  .modal {
-    position: fixed;
-    z-index: 1; 
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%; 
-    background-color: #474e5d;
-    /* padding-top: 10px;  */
-      /* overflow: hidden !important; */
-  }
-  
-  /* Modal Content/Box */
-  .modalContent {
-    background-color: #fefefe;
-    margin: 14% auto 10% auto !important; 
-    border: 1px solid #888;
-    font-size: 1.6em;
-    /* width: 50%;  */
-  }
-  
-  /* Style the horizontal ruler */
-  hr {
-    border: 1px solid #f1f1f1;
-    
-  }
-   
-  /* The Close Button (x) */
-  .close {
-    position: absolute;
-    right: 35px;
-    top: 15px;
-    font-size: 2em;
-    font-weight: bold;
-    color: #f1f1f1;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #f44336;
-    cursor: pointer;
-  }
-  
-  /* Clear floats */
-  .clear::after {
-    content: "";
-    /* clear: both; */
-    display: table;
-  }
-  
-/* LOGIN */
-.logi{
-    background-color: #fefefe;
-    margin: 10% auto; 
-    border: 1px solid rgb(175, 172, 172);
-    font-size: 1.6em;
-    width: 50%; 
-  }
-  
-  /* Full-width inputs */
- .logname, .pasname{
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
-  
-  /* Set a style for all buttons */
- .logins{
-    background-color: #04AA6D;
-    color: white;
-    /* padding: 14px 25px; */
-    margin: 10px 0;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    height: 40px !important;
-    width: 100%;
-  }
-  
-  /* Add a hover effect for buttons */
-  .logins:hover {
-    opacity: 0.8;
-  }
-  
-  /* Extra style for the cancel button (red) */
-  .cancelsbtn {
-    width: auto;
-    text-align: center !important;
-    height: 40px !important;
-    background-color: #f44336;
-  }
-  
-  
-  /* Add padding to containers */
-  /* .login{
-    padding: 225px;
-  } */
-  
-  /* The "Forgot password" text */
-  span.psw {
-    float: right;
-    padding-top: 16px;
-  }
-  
+ 
+ 
   /* Change styles for span and cancel button on extra small screens */
   @media screen and (max-width: 300px) {
     span.psw {

@@ -1,0 +1,118 @@
+/* :root{
+    --orange:#ff7800;
+    --black:#130f40;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--black);
+}
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none !important;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+/* .chat{
+  width: 450px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 20px rgba(0,0,0,0.4);
+} */
+.chatbox{
+  height: 95vh;
+  margin-bottom: 5px;
+}
+/* Chat containers */
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Darker chat container */
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+/* Clear floats */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Style images */
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+/* Style the right image */
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+/* Style time text */
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+/* Style time text */
+.time-left {
+  float: left;
+  color: #999;
+}
+.footer section{
+  display: flex;
+}
+section input{ 
+   color: white;
+  flex: 1;
+  text-align: center;
+  background-color: #666;
+  border: none;
+  border-radius: 6px;
+  height: 40px;
+  outline: none;
+}
+section button{
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  background-color: #666;
+  text-align: center;
+
+  border: 1px solid;
+  border-radius: 50%;
+}
+section button:hover{
+  background-color: rgb(85, 83, 83);
+}
